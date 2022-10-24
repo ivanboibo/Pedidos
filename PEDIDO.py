@@ -3,7 +3,7 @@ from connection_POSTGRESQL import *
 from BaseModel import *
 from CLIENTE import *
 
-class CUENTA(BaseModel):
+class PEDIDO(BaseModel):
     numero = IntegerField(primary_key=True)
-    numeroCliente = ForeignKeyField(CLIENTE, backref="Numero")
-    numeroTarjeta = ForeignKeyField(Ta)
+    numeroCliente = ForeignKeyField(CLIENTE, backref="numero")
+    estado = CharField()

@@ -11,7 +11,6 @@ class CLIENTE(BaseModel):
 
     class Meta:
         db_table = "CLIENTE"
-        database = pg_db
 
     @staticmethod
     def test():

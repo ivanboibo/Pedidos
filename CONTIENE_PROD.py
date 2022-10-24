@@ -10,3 +10,6 @@ from PRODUCTO import *
 class CONTIENE_PROD(BaseModel):
     numeroPedidoSimple = ForeignKeyField(PEDIDO, backref="numero")
     numeroProducto = ForeignKeyField(PRODUCTO, backref="numero")
+
+    class Meta:
+        db_table = "CONTIENE_PROD"

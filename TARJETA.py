@@ -8,3 +8,6 @@ class TARJETA(BaseModel):
      banco = CharField()
      tipo = CharField()
 
+     class Meta:
+          db_table = "TARJETA"
+

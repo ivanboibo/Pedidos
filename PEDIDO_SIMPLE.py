@@ -10,3 +10,6 @@ class PEDIDO_SIMPLE(BaseModel):
     numeroPedido = ForeignKeyField(PEDIDO, backref="numero")
     numeroCuenta = ForeignKeyField(CUENTA, backref="numero")
     numeroPago = ForeignKeyField(PAGO, backref="numero")
+
+    class Meta:
+        db_table = "PEDIDO_SIMPLE"

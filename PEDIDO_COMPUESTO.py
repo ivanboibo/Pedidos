@@ -7,3 +7,6 @@ from PEDIDO import *
 class PEDIDO_COMPUESTO(BaseModel):
     numeroPedido = ForeignKeyField(PEDIDO, backref="numero")
     numeroPedidoHijo = ForeignKeyField(PEDIDO, backref="numero")
+
+    class Meta:
+        db_table = "PEDIDO_COMPUESTO"
